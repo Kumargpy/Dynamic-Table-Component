@@ -6,5 +6,5 @@ export interface Element {
   distrib: number;
   fairValue: number;
   mult: number;
-  symbol: string;
+  
 }

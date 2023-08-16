@@ -47,14 +47,7 @@ export class AppComponent {
       columnDef: 'mult',
       header: 'Mult',
       cell: (element: Record<string, any>) => `${element['mult']}x`
-    },
-    
-    // {
-    //   columnDef: 'symbol',
-    //   header: 'Symbol',
-    //   cell: (element: Record<string, any>) => `${element['symbol']}`
-    // },
-    
+    },      
   ];
 
   tableData: Array<Element> = [
