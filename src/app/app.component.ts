@@ -53,31 +53,5 @@ export class AppComponent {
     { position: 10, name: 'Neon', weight: 20.1797, symbol: 'Ne' }
   ];
 
-  anotherTableColumns: Array<Column> = [
-    {
-      columnDef: 'name',
-      header: 'Name',
-      cell: (element: Record<string, any>) => `${element['name']}`
-    },
-    {
-      columnDef: 'role',
-      header: 'Role',
-      cell: (element: Record<string, any>) => `${element['role']}`
-    },
-    {
-      columnDef: 'skills',
-      header: 'Skills',
-      cell: (element: Record<string, any>) => `${element['skills']}`
-    }
-  ];
-
-  anotherTableData: Array<Employee> = [
-    {
-      name: 'John',
-      role: 'Fullstack Developer',
-      skills: 'Angular, Typescript, React'
-    },
-    { name: 'Mile', role: 'Java Developer', skills: 'Java' },
-    { name: 'Peter', role: 'DevOps', skills: 'AWS, GCP' }
-  ];
+  
 }
