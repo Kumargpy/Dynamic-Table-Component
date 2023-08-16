@@ -2,7 +2,7 @@ import { Component } from '@angular/core';
 
 import { Column } from './components/table/column';
 import { Element } from './element';
-import { Employee } from './employee';
+
 
 @Component({
   selector: 'app-root',
@@ -12,45 +12,58 @@ import { Employee } from './employee';
 export class AppComponent {
   tableColumns: Array<Column> = [
     {
-      columnDef: 'position',
-      header: 'Position',
-      cell: (element: Record<string, any>) => `${element['position']}`
+      columnDef: 'company',
+      header: 'Company/Asset Name',
+      cell: (element: Record<string, any>) => `${element['company']}`
     },
     {
-      columnDef: 'name',
-      header: 'Name',
-      cell: (element: Record<string, any>) => `${element['name']}`,
-      isLink: true,
+      columnDef: 'sector',
+      header: 'Sector',
+      cell: (element: Record<string, any>) => `${element['sector']}`,
+      isLink: false,
       url: 'abc'
     },
     {
-      columnDef: 'weight',
-      header: 'Weight',
-      cell: (element: Record<string, any>) => `${element['weight']}`
+      columnDef: 'location',
+      header: 'Location',
+      cell: (element: Record<string, any>) => `${element['location']}`
     },
     {
-      columnDef: 'symbol',
-      header: 'Symbol',
-      cell: (element: Record<string, any>) => `${element['symbol']}`
+      columnDef: 'cost',
+      header: 'Cost',
+      cell: (element: Record<string, any>) => `$${element['cost']}`
     },
     {
-      columnDef: 'symbol2',
-      header: 'Symbol2',
-      cell: (element: Record<string, any>) => `${element['symbol']}`
-    }
+      columnDef: 'distrib',
+      header: 'Distrib',
+      cell: (element: Record<string, any>) => `$${element['distrib']}`
+    },
+    {
+      columnDef: 'fairValue',
+      header: 'Fair Value',
+      cell: (element: Record<string, any>) => `$${element['fairValue']}`
+    },
+    {
+      columnDef: 'mult',
+      header: 'Mult',
+      cell: (element: Record<string, any>) => `${element['mult']}x`
+    },
+    
+    // {
+    //   columnDef: 'symbol',
+    //   header: 'Symbol',
+    //   cell: (element: Record<string, any>) => `${element['symbol']}`
+    // },
+    
   ];
 
   tableData: Array<Element> = [
-    { position: 1, name: 'Hydrogen', weight: 1.0079, symbol: 'H' },
-    { position: 2, name: 'Helium', weight: 4.0026, symbol: 'He' },
-    { position: 3, name: 'Lithium', weight: 6.941, symbol: 'Li' },
-    { position: 4, name: 'Beryllium', weight: 9.0122, symbol: 'Be' },
-    { position: 5, name: 'Boron', weight: 10.811, symbol: 'B' },
-    { position: 6, name: 'Carbon', weight: 12.0107, symbol: 'C' },
-    { position: 7, name: 'Nitrogen', weight: 14.0067, symbol: 'N' },
-    { position: 8, name: 'Oxygen', weight: 15.9994, symbol: 'O' },
-    { position: 9, name: 'Fluorine', weight: 18.9984, symbol: 'F' },
-    { position: 10, name: 'Neon', weight: 20.1797, symbol: 'Ne' }
+    { company: 'Low C Packaging', sector: 'Materials', location: 'Richmond, VA', cost:7.0,distrib:0.0,fairValue:33.3,mult:4.8,symbol:'h' },
+    { company: 'Mobile Co.', sector: 'Communication Services', location: 'Encino, CA', cost:14.0,distrib:0.0,fairValue:15.4,mult:1.1,symbol:'h' },
+    { company: 'Power Plant Co.', sector: 'Energy', location: 'Berkeley, CA', cost:6.0,distrib:0.0,fairValue:11.4,mult:1.9,symbol:'h' },
+    { company: 'Small Ship Co.', sector: 'Industrials', location: 'Deerfield Beach, FL ', cost:2.5,distrib:0.0,fairValue:8.5,mult:3.4,symbol:'h' },
+    { company: 'Play Learn ', sector: 'Information Technology ', location: 'Austin, TX', cost:3.0,distrib:0.0,fairValue:8.2,mult:2.7,symbol:'h' },
+   
   ];
 
   
